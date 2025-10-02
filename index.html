@@ -408,6 +408,7 @@
                 <h2 class="white">התחל את המסע שלך עם<br>מוניות העיר באר-שבע!</h2>
             </div>
             <!--/.section-heading-->
+			
 <!-- Section Services -->
 <div class="section-heading">
     <h2>השירותים שלנו</h2>
@@ -521,16 +522,14 @@
 
             <div class="col-lg-8">
                 <div class="booking-wrap">
-                    <div class="section-heading mb-30" style="text-align:center;">
+                    <div class="section-heading mb-30">
                         <h4><span></span>הזמנה אונליין</h4>
 
-                        <!-- כותרת עם חץ כתום למטה במרכז -->
-                        <div class="title-with-arrow">
-                            <h2 class="white toggle-title" id="toggleBookingForm">
-                                הזמן את הנסיעה שלך
-                            </h2>
+                        <!-- כותרת עם חץ כתום למטה -->
+                        <h2 class="white toggle-title" id="toggleBookingForm">
+                            הזמן את הנסיעה שלך
                             <span class="arrow-down"></span>
-                        </div>
+                        </h2>
                     </div>
 
                     <!-- הטופס מוסתר כברירת מחדל -->
@@ -540,10 +539,12 @@
                                 <i class="las la-user-tie"></i>
                                 <input type="text" id="full-name" name="full-name" class="form-control" placeholder="השם שלך" required>
                             </div>
+
                             <div class="form-field">
                                 <i class="las la-envelope-open"></i>
                                 <input type="email" id="email" name="email" class="form-control" placeholder="אימייל" required>
                             </div>
+
                             <div class="form-field">
                                 <i class="las la-tags"></i>
                                 <select name="package-type" id="type" class="niceSelect" style="display: none;">
@@ -554,6 +555,7 @@
                                     <option value="comfort">נוחות</option>
                                 </select>
                             </div>
+
                             <div class="form-field">
                                 <i class="las la-user-friends"></i>
                                 <select name="passengers" id="passengers" class="niceSelect" style="display: none;">
@@ -564,22 +566,27 @@
                                     <option value="5">חמישה אנשים</option>
                                 </select>
                             </div>
+
                             <div class="form-field">
                                 <i class="las la-map-marker"></i>
                                 <input type="text" id="start-dest" name="start-dest" class="form-control" placeholder="מוצא" required>
                             </div>
+
                             <div class="form-field">
                                 <i class="las la-map-marker"></i>
                                 <input type="text" id="end-dest" name="end-dest" class="form-control" placeholder="יעד" required>
                             </div>
+
                             <div class="form-field">
                                 <i class="las la-calendar"></i>
                                 <input type="text" id="ride-date" name="ride-date" class="form-control date-picker" placeholder="בחר תאריך" required>
                             </div>
+
                             <div class="form-field">
                                 <i class="las la-clock"></i>
                                 <input type="text" id="ride-time" name="ride-time" class="form-control time-picker" placeholder="בחר שעה" required>
                             </div>
+
                             <div class="form-field">
                                 <button id="submit" class="default-btn" type="submit">הזמן מונית</button>
                             </div>
@@ -597,15 +604,14 @@
 <!--/.booking-section-->
 
 <style>
-/* מרכז את הכותרת ואת החץ */
-.title-with-arrow {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* חץ כתום זוהר למטה */
+.toggle-title {
     cursor: pointer;
+    position: relative;
+    display: inline-block;
+    color: #fff;
 }
 
-/* חץ כתום זוהר למטה */
 .arrow-down {
     display: block;
     width: 16px;
@@ -613,18 +619,13 @@
     border-left: 4px solid orange;
     border-bottom: 4px solid orange;
     transform: rotate(-45deg);
-    margin-top: 10px;
+    margin: 10px auto 0;
     animation: glow 1s infinite alternate;
 }
 
 @keyframes glow {
     0% { box-shadow: 0 0 5px orange; }
     100% { box-shadow: 0 0 15px orange; }
-}
-
-.toggle-title {
-    color: #fff;
-    margin: 0;
 }
 </style>
 
@@ -640,6 +641,7 @@ toggleButton.addEventListener('click', () => {
     }
 });
 </script>
+
 <!--/.booking-section-->
                     <form action="https://html.dynamiclayers.net/dl/ridek/book-ride.php" id="book-taxi-ride" style="display:none;">
                         <div class="booking-form">
