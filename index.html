@@ -512,6 +512,7 @@
 </script>
 
 <!--/.service-section-->
+<!--/.service-section-->
 <section class="booking-section">
     <div class="container">
         <div class="row pos-relative padding">
@@ -523,12 +524,17 @@
                 <div class="booking-wrap">
                     <div class="section-heading mb-30">
                         <h4><span></span>הזמנה אונליין</h4>
-                        <h2 class="white">הזמן את הנסיעה שלך</h2>
+
+                        <!-- כותרת עם חץ כתום למטה -->
+                        <h2 class="white toggle-title" id="toggleBookingForm">
+                            הזמן את הנסיעה שלך
+                            <span class="arrow-down"></span>
+                        </h2>
                     </div>
 
-                    <form action="https://html.dynamiclayers.net/dl/ridek/book-ride.php" id="book-taxi-ride">
+                    <!-- הטופס מוסתר כברירת מחדל -->
+                    <form action="https://html.dynamiclayers.net/dl/ridek/book-ride.php" id="book-taxi-ride" style="display: none;">
                         <div class="booking-form">
-
                             <div class="form-field">
                                 <i class="las la-user-tie"></i>
                                 <input type="text" id="full-name" name="full-name" class="form-control" placeholder="השם שלך" required>
@@ -548,16 +554,6 @@
                                     <option value="vip-spacial">VIP Spacial</option>
                                     <option value="comfort">נוחות</option>
                                 </select>
-                                <div class="nice-select niceSelect" tabindex="0">
-                                    <span class="current">רגיל</span>
-                                    <ul class="list">
-                                        <li data-value="standard" class="option selected">רגיל</li>
-                                        <li data-value="business" class="option">עסקי</li>
-                                        <li data-value="economy" class="option">חסכוני</li>
-                                        <li data-value="vip-spacial" class="option">VIP Spacial</li>
-                                        <li data-value="comfort" class="option">נוחות</li>
-                                    </ul>
-                                </div>
                             </div>
 
                             <div class="form-field">
@@ -569,16 +565,6 @@
                                     <option value="4">ארבעה אנשים</option>
                                     <option value="5">חמישה אנשים</option>
                                 </select>
-                                <div class="nice-select niceSelect" tabindex="0">
-                                    <span class="current">אדם אחד</span>
-                                    <ul class="list">
-                                        <li data-value="1" class="option selected">אדם אחד</li>
-                                        <li data-value="2" class="option">שני אנשים</li>
-                                        <li data-value="3" class="option">שלושה אנשים</li>
-                                        <li data-value="4" class="option">ארבעה אנשים</li>
-                                        <li data-value="5" class="option">חמישה אנשים</li>
-                                    </ul>
-                                </div>
                             </div>
 
                             <div class="form-field">
@@ -604,7 +590,6 @@
                             <div class="form-field">
                                 <button id="submit" class="default-btn" type="submit">הזמן מונית</button>
                             </div>
-
                         </div>
 
                         <div id="form-messages" class="alert" role="alert"></div>
@@ -616,6 +601,46 @@
         </div>
     </div>
 </section>
+<!--/.booking-section-->
+
+<style>
+/* חץ כתום זוהר למטה */
+.toggle-title {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    color: #fff;
+}
+
+.arrow-down {
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-left: 4px solid orange;
+    border-bottom: 4px solid orange;
+    transform: rotate(-45deg);
+    margin: 10px auto 0;
+    animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 5px orange; }
+    100% { box-shadow: 0 0 15px orange; }
+}
+</style>
+
+<script>
+const toggleButton = document.getElementById('toggleBookingForm');
+const bookingForm = document.getElementById('book-taxi-ride');
+
+toggleButton.addEventListener('click', () => {
+    if (bookingForm.style.display === "none" || bookingForm.style.display === "") {
+        bookingForm.style.display = "block";
+    } else {
+        bookingForm.style.display = "none";
+    }
+});
+</script>
 <!--/.booking-section-->
                     <form action="https://html.dynamiclayers.net/dl/ridek/book-ride.php" id="book-taxi-ride" style="display:none;">
                         <div class="booking-form">
