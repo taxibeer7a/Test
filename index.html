@@ -511,7 +511,7 @@
     });
 </script>
 
-    <section class="booking-section">
+<section class="booking-section">
     <div class="container">
         <div class="row pos-relative padding">
             <div class="col-lg-4">
@@ -521,8 +521,6 @@
                 <div class="booking-wrap">
                     <div class="section-heading mb-30">
                         <h4><span></span>הזמנה אונליין</h4>
-
-                        <!-- כותרת עם חצים כפולים -->
                         <h2 class="white toggle-title" id="toggleBookingForm">
                             <span class="double-arrows left">
                                 <span></span>
@@ -536,89 +534,19 @@
                         </h2>
                     </div>
 
-                    <!-- הטופס מוסתר כברירת מחדל -->
                     <form action="https://html.dynamiclayers.net/dl/ridek/book-ride.php" id="book-taxi-ride" style="display:none;">
                         <div class="booking-form">
-                            <!-- שדות הטופס כפי שהיו -->
+                            <!-- שדות לדוגמה, ניתן להוסיף את כל השדות שלך כאן -->
                             <div class="form-field">
                                 <i class="las la-user-tie"></i>
                                 <input type="text" id="full-name" name="full-name" class="form-control" placeholder="השם שלך" required>
                             </div>
-                            <!-- הוספתי כאן רק דוגמה, ניתן להוסיף את שאר השדות כמו קודם -->
                             <div class="form-field">
                                 <button id="submit" class="default-btn" type="submit">הזמן מונית</button>
                             </div>
                         </div>
-                        <div id="form-messages" class="alert" role="alert"></div>
-                    </form>
+                        <div id="form-messages" class="
 
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<style>
-/* חצים כפולים */
-.toggle-title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    gap: 10px;
-    position: relative;
-}
-
-.double-arrows {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 2px;
-}
-
-.double-arrows span {
-    display: block;
-    width: 8px;
-    height: 8px;
-    border-left: 3px solid white;
-    border-bottom: 3px solid white;
-    transform: rotate(-45deg);
-    margin: 0 auto;
-}
-
-/* היפוך הכיוונים */
-.double-arrows.right span {
-    transform: rotate(45deg);
-}
-</style>
-
-<script>
-const toggleButton = document.getElementById('toggleBookingForm');
-const bookingForm = document.getElementById('book-taxi-ride');
-
-toggleButton.addEventListener('click', () => {
-    if(bookingForm.style.display === "none" || bookingForm.style.display === "") {
-        bookingForm.style.display = "block";
-    } else {
-        bookingForm.style.display = "none";
-    }
-});
-</script>
-
-<script>
-    // בוחר את הכותרת ואת הטופס
-    const toggleButton = document.getElementById('toggleBookingForm');
-    const bookingForm = document.getElementById('book-taxi-ride');
-
-    // Toggle show/hide בלחיצה
-    toggleButton.addEventListener('click', () => {
-        if(bookingForm.style.display === "none" || bookingForm.style.display === "") {
-            bookingForm.style.display = "block";
-        } else {
-            bookingForm.style.display = "none";
-        }
-    });
-</script>
 
     <section class="pricing-section bg-grey bd-bottom padding">
         <div class="container">
