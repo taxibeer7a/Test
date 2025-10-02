@@ -413,7 +413,7 @@
     <h2>השירותים שלנו</h2>
 </div>
 
-<div class="service-carousel swiper-outside">
+<div class="service-carousel swiper">
     <div class="swiper-wrapper">
         <!-- שירות 1 -->
         <div class="swiper-slide">
@@ -485,8 +485,32 @@
             </div>
         </div>
     </div>
-    <!-- אם רוצים חצים/פגי-ניישן ניתן להוסיף כאן -->
+
+    <!-- חצים -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
 </div>
+
+<!-- Swiper JS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<script>
+    const swiper = new Swiper('.swiper', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            0: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 }
+        }
+    });
+</script>
+
     <!--/.service-section-->
     <section class="booking-section">
         <div class="container">
