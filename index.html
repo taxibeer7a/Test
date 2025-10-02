@@ -995,8 +995,13 @@ toggleButton.addEventListener('click', () => {
 
     <div class="copyright-wrap">
         <div class="container">
-            <p>© <span id="currentYear">2025</span> מוניות העיר באר שבע - כל הזכויות שמורות.</p>
-        </div>
+<p>© <span id="currentYear"></span> מוניות העיר באר שבע - כל הזכויות שמורות.</p>
+
+<script>
+  // עדכון אוטומטי של השנה הנוכחית
+  document.getElementById("currentYear").textContent = new Date().getFullYear();
+</script>
+		</div>
     </div>
     <!--/.copyright-wrap-->
 </footer>
