@@ -1,0 +1,7 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+moniyotahir.b144websites.co.il	TRUE	/	FALSE	1999999999	ASP.NET_SessionId	vgii2pfnjzcd30vezbgct1ul
+moniyotahir.b144websites.co.il	TRUE	/	FALSE	1999999999	SameSite	Lax
+moniyotahir.b144websites.co.il	TRUE	/	FALSE	1999999999	TS018fef32	017acae670e5ac3b09e0411567a8ea608964c867640b0fb4a9027d0c75961733bdd25f90b2e6e6481aa7241ac06298167c25fc91e1467286c37a26ab94e2fcbb743faeb229
+.w3.org	TRUE	/	FALSE	1999999999	__cf_bm	Umk6ltdpWXMe0PIHNARyc3HXTXPEVwzNW0dn9hw9JIk-1760866415-1.0.1.1-47_UbwYa_BbFmoJht1mWUpOOHTtAGrcY6gjWgwUxLNCvdciZI7vdEC5kxvZQ16INjgVZmd6fryT.pMDDs9HD6bdKbtsDVYgNjKdTz11_8a8
+
