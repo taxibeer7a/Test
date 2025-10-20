@@ -1,1 +1,0 @@
-// FB SDK JS Placeholder
